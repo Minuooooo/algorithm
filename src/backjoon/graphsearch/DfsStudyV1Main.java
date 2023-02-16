@@ -8,10 +8,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class DfsStudyMain {
+public class DfsStudyV1Main {
 
     static StringBuilder sb = new StringBuilder();
-    static int[] result = new int[100001];
+    static LinkedList<Integer>[] graph;
+    static int[] visited;
     static int count = 0;
 
     public static void main(String[] args) throws IOException {
@@ -22,7 +23,8 @@ public class DfsStudyMain {
         int M = Integer.parseInt(st.nextToken()); //간선 개수
         int R = Integer.parseInt(st.nextToken()); //시작 정점
 
-        LinkedList<Integer>[] graph = new LinkedList[N + 1]; //그래프
+        graph = new LinkedList[N + 1]; //그래프
+        visited = new int[N + 1]; //방문 체크
 
         for (int i = 1; i <= N; i++) {
             graph[i] = new LinkedList<>();
@@ -42,12 +44,10 @@ public class DfsStudyMain {
             Collections.sort(graph[i]); //각 정점에 연결된 정점을 오름차순 정렬
         }
 
-        boolean[] visited = new boolean[N + 1]; //방문 체크
-
-        DFS(R, graph, visited); //탐색 시작
+        dfs(R, graph, visited); //탐색 시작
 
         for (int i = 1; i <= N; i++) {
-            sb.append(result[i] + "\n");
+            sb.append(visited[i] + "\n");
         }
 
         sb.deleteCharAt(sb.length() - 1);
@@ -55,20 +55,19 @@ public class DfsStudyMain {
     }
 
     //DFS(깊이 우선 탐색)
-    public static void DFS(int R, LinkedList<Integer>[] graph, boolean[] visited) {
+    public static void dfs(int R, LinkedList<Integer>[] graph, int[] visited) {
 
         Iterator<Integer> iterator = graph[R].listIterator();
 
-        visited[R] = true; //시작 정점은 무조건 방문
-        result[R] = ++count; //순서 입력
+        visited[R] = ++count; //시작 정점은 무조건 방문
 
         //방문한 정점에 인접한 정점이 있다면
         while (iterator.hasNext()) {
             int w = iterator.next();
 
             //아직 방문하지 않았다면
-            if (!visited[w]) {
-                DFS(w, graph, visited); //DFS 탐색
+            if (visited[w] == 0) {
+                dfs(w, graph, visited); //DFS 탐색
             }
         }
     }
