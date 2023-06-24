@@ -7,11 +7,11 @@ public class P11720_숫자의합 {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
         String sNum = scanner.next();
-        char[] cNum = sNum.toCharArray();
+        char[] cNum = sNum.toCharArray();  // 문자열 -> character array
         int sum = 0;
 
         for (char c : cNum) {
-            sum += c - '0';
+            sum += c - '0';  // char -> int
         }
         System.out.println(sum);
     }
