@@ -9,7 +9,7 @@ public class P2018_연속된자연수의합 {
         int N = scanner.nextInt();
         int count = 1;  // 자기 자신 카운팅 -> 1
 
-        // Two pointer
+        // Two pointer -> O(n)
         int start_index = 1;
         int end_index = 1;
 
