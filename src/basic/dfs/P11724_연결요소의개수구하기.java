@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class P11724_연결요소의개수구하기 {
 
-    static ArrayList<Integer>[] A;  // 인접 리스트
+    static ArrayList<ArrayList<Integer>> A;  // 인접 리스트, ArrayList 는 제네릭 타입이므로 배열 선언 시 이와 같이 선언
     static boolean[] visited;  // 방문 체크
 
     public static void main(String[] args) throws IOException {
@@ -18,18 +18,18 @@ public class P11724_연결요소의개수구하기 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         visited = new boolean[n + 1];
-        A = new ArrayList[n + 1];
+        A = new ArrayList<>(n + 1);
 
-        for (int i = 1; i < n + 1; i++) {
-            A[i] = new ArrayList<>();
+        for (int i = 0; i < n + 1; i++) {
+            A.add(new ArrayList<>());
         }
 
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int s = Integer.parseInt(st.nextToken());
             int e = Integer.parseInt(st.nextToken());
-            A[s].add(e);
-            A[e].add(s);  // 양방향
+            A.get(s).add(e);
+            A.get(e).add(s);  // 양방향
         }
 
         int count = 0;
@@ -47,7 +47,7 @@ public class P11724_연결요소의개수구하기 {
             return;
 
         visited[v] = true;
-        for (int i : A[v]) {
+        for (int i : A.get(v)) {
             if (!visited[i])
                 dfs(i);
         }
