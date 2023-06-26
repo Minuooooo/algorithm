@@ -15,7 +15,7 @@ public class P1929_소수구하기 {
             A[i] = i;
         }
 
-        for (int i = 2; i <= Math.sqrt(N); i++) {
+        for (int i = 2; i <= Math.sqrt(N); i++) {  // 에라토스테네스의 체 방식 (배수는 모두 소거)
             if(A[i] == 0)
                 continue;
 
