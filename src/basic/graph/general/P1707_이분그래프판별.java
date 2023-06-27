@@ -64,6 +64,6 @@ public class P1707_이분그래프판별 {
                 dfs(i);
             } else if (check[start] == check[i])
                 isEven = false;
-            }
+        }
     }
 }
