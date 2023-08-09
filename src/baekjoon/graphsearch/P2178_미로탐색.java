@@ -12,8 +12,8 @@ public class P2178_미로탐색 {
     static int N, M;
     static int[][] map;
     static boolean[][] isVisited;
-    static int[] dx = {0, 1, 0, -1};
-    static int[] dy = {-1, 0, 1, 0};
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     public static void main(String[] args) throws IOException {
 
