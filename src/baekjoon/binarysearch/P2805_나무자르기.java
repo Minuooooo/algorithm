@@ -30,7 +30,7 @@ public class P2805_나무자르기 {
         while(min < max) {
 
             int mid = (min + max) / 2;
-            int sum = 0;
+            long sum = 0;
 
             for(int treeHeight : tree) {
                 if(treeHeight - mid > 0)
