@@ -30,8 +30,9 @@ public class P11047_동전0 {
                 count += K / coin[coinIndex];  // 해당 가치에 대한 동전 개수
                 K %= coin[coinIndex];  // 가치의 합 차감
 
-            } else
-                coinIndex--;
+            }
+
+            coinIndex--;
         }
 
         System.out.println(count);
