@@ -11,7 +11,7 @@ public class P11725_트리의부모찾기 {
     static int N;
     static ArrayList<ArrayList<Integer>> graph;
     static boolean[] isVisited;
-    static int[] parent;
+    static int[] parent;  // 자식 노드를 index 로 하여 부모 노드 저장
 
     public static void main(String[] args) throws IOException {
 
@@ -50,7 +50,7 @@ public class P11725_트리의부모찾기 {
         for(int nextV : graph.get(v)) {
 
             if(!isVisited[nextV]) {
-                parent[nextV] = v;
+                parent[nextV] = v;  // 자식을 index 로 하여 부모 저장
                 dfs(nextV);
             }
         }

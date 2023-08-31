@@ -26,7 +26,7 @@ public class P9372_상근이의여행 {
                 int b = Integer.parseInt(st.nextToken());
             }
 
-            sb.append(N - 1).append('\n');
+            sb.append(N - 1).append('\n');  // Tree 구조로 생각할 때, 모든 노드를 방문할 때 최소 간선의 개수는 (노드 - 1)개
         }
 
         System.out.println(sb);
