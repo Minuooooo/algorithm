@@ -22,7 +22,7 @@ public class P2294_동전2 {
         }
 
         int[] dp = new int[k + 1];
-        Arrays.fill(dp, 10001);
+        Arrays.fill(dp, 100001);
         dp[0] = 0;
 
         for (int i = 0; i < n; i++) {
@@ -31,6 +31,6 @@ public class P2294_동전2 {
             }
         }
 
-        System.out.println(dp[k] == 10001 ? -1 : dp[k]);
+        System.out.println(dp[k] == 100001 ? -1 : dp[k]);
     }
 }
