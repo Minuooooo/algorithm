@@ -30,11 +30,11 @@ public class P11728_배열합치기 {
             B[i] = Integer.parseInt(st.nextToken());
         }
 
-        concatenateAndSort(A, B);
+        printSortedData(A, B);
         System.out.println(sb);
     }
 
-    private static void concatenateAndSort(int[] arr1, int[] arr2) {
+    private static void printSortedData(int[] arr1, int[] arr2) {
 
         int arr1Size = arr1.length;
         int arr2Size = arr2.length;
