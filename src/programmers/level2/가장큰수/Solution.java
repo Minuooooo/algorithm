@@ -1,4 +1,4 @@
-package baekjoon.programmers.level2.가장큰수;
+package programmers.level2.가장큰수;
 
 import java.util.*;
 

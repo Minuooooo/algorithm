@@ -1,4 +1,4 @@
-package baekjoon.programmers.level2.이곱하기n타일링;
+package programmers.level2.이곱하기n타일링;
 
 public class Solution {
 
