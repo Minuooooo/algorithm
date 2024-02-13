@@ -57,7 +57,7 @@ public class P16401_과자_나눠주기 {
 
             if (count >= M) {
 
-                result = Math.max(result, mid);
+                result = mid;
                 left = mid + 1;
             }
 
