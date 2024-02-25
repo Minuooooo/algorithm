@@ -1,4 +1,4 @@
-package baekjoon.practice.P2225합분해;
+package baekjoon.dynamic.P2225합분해;
 
 import java.io.BufferedReader;
 import java.io.IOException;

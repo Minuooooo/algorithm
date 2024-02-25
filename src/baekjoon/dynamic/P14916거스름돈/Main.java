@@ -1,4 +1,4 @@
-package baekjoon.practice.P14916거스름돈;
+package baekjoon.dynamic.P14916거스름돈;
 
 import java.io.BufferedReader;
 import java.io.IOException;
