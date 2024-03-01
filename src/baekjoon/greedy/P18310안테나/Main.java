@@ -1,4 +1,4 @@
-package baekjoon.implementation.P18310안테나;
+package baekjoon.greedy.P18310안테나;
 
 import java.io.BufferedReader;
 import java.io.IOException;
